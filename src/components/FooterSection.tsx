@@ -61,10 +61,15 @@ export default function FooterSection() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          <p className="font-mono text-[10px] text-white/15 uppercase tracking-wide">
-            © 2026 Figuring Out Media · 17.5M subscribers · 2.4k videos. All rights reserved.
-          </p>
+        <div className="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div className="flex flex-col gap-2">
+            <p className="font-mono text-[10px] text-white/15 uppercase tracking-wide">
+              © 2026 Figuring Out Media · 17.5M subscribers · 2.4k videos. All rights reserved.
+            </p>
+            <p className="font-mono text-[10px] text-white/20 uppercase tracking-widest">
+              Built by <span className="text-white/50">ROHAN VEMULA</span> · <a href="mailto:rohanvemula7@gmail.com" className="hover:text-white/60 transition-colors">rohanvemula7@gmail.com</a>
+            </p>
+          </div>
           <p className="font-mono text-[10px] text-white/15 uppercase tracking-wide">
             Made with questions. 🎙️
           </p>
