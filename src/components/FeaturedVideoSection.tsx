@@ -26,8 +26,8 @@ export default function FeaturedVideoSection() {
           {!isPlaying ? (
             <>
               <VideoThumbnail 
-                src="https://i.ytimg.com/vi/aA5tLih8oDk/maxresdefault.jpg" 
-                alt="Khan Sir"
+                src="https://i.ytimg.com/vi/E3oG313_kps/maxresdefault.jpg" 
+                alt="Simon Sinek"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
@@ -37,19 +37,19 @@ export default function FeaturedVideoSection() {
               </div>
               
               <div className="absolute top-4 left-4 liquid-glass rounded-full px-3 py-1.5 font-mono text-[10px] text-white/80 tracking-widest">
-                MOST WATCHED
+                GLOBAL EXCLUSIVE
               </div>
               
               <div className="absolute bottom-6 left-6 flex items-end gap-3 z-10">
-                <span className="font-display text-4xl text-white leading-none">35M</span>
+                <span className="font-display text-4xl text-white leading-none">12.6M</span>
                 <span className="font-body text-xs text-white/60 mb-1">total views</span>
               </div>
             </>
           ) : (
             <div className="w-full h-full bg-black relative">
               <iframe
-                src="https://www.youtube-nocookie.com/embed/aA5tLih8oDk?autoplay=1"
-                title="Khan Sir Podcast"
+                src="https://www.youtube-nocookie.com/embed/E3oG313_kps?autoplay=1"
+                title="Simon Sinek Podcast"
                 className="w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -67,24 +67,27 @@ export default function FeaturedVideoSection() {
         {/* Right Info */}
         <div className="flex flex-col justify-center">
           <p className="font-mono text-[10px] text-white/60 tracking-[0.3em] uppercase mb-4">
-            FO 343 · APRIL 2025
+            FO 476 · MAY 2026
           </p>
           <h3 className="font-display text-3xl md:text-5xl text-white leading-[1.1] mb-6">
-            Khan Sir Podcast: India vs China, Pakistan, Bihar’s Reality & Geopolitics
+            Simon Sinek: The Truth About Loneliness, Work & Friendship
           </h3>
           <p className="font-body text-sm text-white/70 leading-relaxed mb-8 max-w-md">
-            "Khan Sir, India's most beloved teacher, sat down for a marathon conversation. They discussed India-China tensions, Pakistan, Bihar’s political reality, and the state of education. It struck a chord like nothing else, becoming the most-watched video on the channel with 35 million views."
+            "Global leadership icon Simon Sinek joins Raj Shamani to discuss the crisis of loneliness in the modern world, the evolving nature of work, and why deep friendships are the ultimate competitive advantage."
           </p>
 
           <div className="flex gap-3 flex-wrap">
-            {['35M Views', 'Geopolitics', '#1 All Time'].map(stat => (
+            {['12.6M Views', 'Leadership', 'Global Guest'].map(stat => (
               <span key={stat} className="liquid-glass rounded-full px-4 py-2 font-mono text-xs text-white/80">
                 {stat}
               </span>
             ))}
           </div>
 
-          <button className="mt-10 bg-white text-black rounded-full px-7 py-3 font-semibold text-sm flex items-center gap-2 w-fit hover:bg-white/90 transition">
+          <button 
+            onClick={() => window.open('https://www.youtube.com/watch?v=E3oG313_kps', '_blank')}
+            className="mt-10 bg-white text-black rounded-full px-7 py-3 font-semibold text-sm flex items-center gap-2 w-fit hover:bg-white/90 transition"
+          >
             Watch on YouTube
             <ExternalLink className="w-4 h-4" />
           </button>

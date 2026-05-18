@@ -17,22 +17,21 @@ export const topVideos: TopVideo[] = [
   {
     id: "1",
     rank: "01",
-    guest: "Khan Sir · Educator & Geopolitics Analyst",
-    episode: "FO 343 · April 2025",
-    title: "Khan Sir Podcast: India vs China, Pakistan, Bihar’s Reality & Geopolitics",
-    views: "35M",
-    likes: "500K+",
-    youtubeId: "aA5tLih8oDk",
-    note: "Khan Sir’s first appearance on a major podcast. A raw, unfiltered discussion on geopolitics, education, and India’s ground reality that resonated with millions.",
-    thumbnail: "https://i.ytimg.com/vi/aA5tLih8oDk/maxresdefault.jpg",
+    guest: "Simon Sinek · Author & Leadership Coach",
+    episode: "FO 476 · May 2026",
+    title: "Simon Sinek: The Truth About Loneliness, Work & Friendship",
+    views: "12.6M",
+    likes: "180K+",
+    youtubeId: "E3oG313_kps",
+    note: "Global leadership icon Simon Sinek discusses the crisis of loneliness and the importance of deep friendships in the modern world.",
+    thumbnail: "https://i.ytimg.com/vi/E3oG313_kps/maxresdefault.jpg",
     topics: [
-      "Geopolitics",
-      "India vs China",
-      "Pakistan",
-      "Bihar’s reality",
-      "Education system"
+      "Loneliness crisis",
+      "Modern workplace",
+      "Value of friendship",
+      "Leadership mindset"
     ],
-    quote: "Education is not a weapon of the rich, it is the shield of the poor."
+    quote: "Working hard for something we don't care about is called stress; working hard for something we love is called passion."
   },
   {
     id: "2",
