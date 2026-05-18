@@ -31,16 +31,16 @@ export default function TopVideosSection() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
               whileHover={{ x: 6 }}
-              className="full-width flex items-center gap-4 md:gap-10 py-7 border-b border-white/5 cursor-pointer group"
+              className="full-width flex flex-col sm:flex-row items-center sm:items-center gap-4 md:gap-10 py-7 border-b border-white/5 cursor-pointer group"
               onClick={() => setActiveVideo(video.youtubeId)}
             >
               {/* Rank */}
-              <div className="font-display text-[60px] md:text-[100px] text-white/20 group-hover:text-white/40 transition-colors leading-none w-16 md:w-28 shrink-0 select-none">
+              <div className="font-display text-[40px] md:text-[100px] text-white/20 group-hover:text-white/40 transition-colors leading-none w-full sm:w-16 md:w-28 shrink-0 select-none text-center sm:text-left">
                 {video.rank}
               </div>
 
               {/* Thumbnail */}
-              <div className="rounded-xl overflow-hidden w-28 md:w-44 aspect-video shrink-0 relative flex-none">
+              <div className="rounded-xl overflow-hidden w-full sm:w-28 md:w-44 aspect-video shrink-0 relative flex-none">
                 <VideoThumbnail 
                   src={video.thumbnail} 
                   alt={video.title}
@@ -52,11 +52,11 @@ export default function TopVideosSection() {
               </div>
 
               {/* Info */}
-              <div className="flex-1 min-w-0 pr-4">
-                <p className="font-mono text-[10px] text-white/60 tracking-[0.2em] uppercase mb-1.5 md:mb-2 truncate">
+              <div className="flex-1 min-w-0 pr-0 sm:pr-4 text-center sm:text-left">
+                <p className="font-mono text-[9px] md:text-[10px] text-white/60 tracking-[0.2em] uppercase mb-1.5 md:mb-2 truncate">
                   {video.guest}
                 </p>
-                <h3 className="font-display text-lg md:text-2xl text-white group-hover:text-white transition-colors leading-snug line-clamp-2">
+                <h3 className="font-display text-base md:text-2xl text-white group-hover:text-white transition-colors leading-snug line-clamp-2">
                   {video.title}
                 </h3>
                 <p className="font-body text-xs text-white/50 leading-relaxed mt-1 md:mt-2 line-clamp-2 hidden md:block">
@@ -65,10 +65,10 @@ export default function TopVideosSection() {
               </div>
 
               {/* Stats */}
-              <div className="shrink-0 text-right flex flex-col items-end gap-1">
-                <div className="font-display text-2xl md:text-3xl text-white">{video.views}</div>
-                <div className="font-mono text-[9px] text-white/60 tracking-widest uppercase mb-1">VIEWS</div>
-                <div className="liquid-glass rounded-full px-2 py-1 md:px-3 md:py-1 font-mono text-[9px] md:text-[10px] text-white/80 mt-1 md:mt-2">
+              <div className="w-full sm:w-auto shrink-0 text-center sm:text-right flex flex-row sm:flex-col items-center sm:items-end justify-center sm:justify-end gap-3 sm:gap-1 mt-2 sm:mt-0">
+                <div className="font-display text-xl md:text-3xl text-white">{video.views}</div>
+                <div className="font-mono text-[8px] md:text-[9px] text-white/60 tracking-widest uppercase">VIEWS</div>
+                <div className="liquid-glass rounded-full px-2 py-1 md:px-3 md:py-1 font-mono text-[9px] md:text-[10px] text-white/80 ml-auto sm:ml-0">
                   {video.likes} LIKES
                 </div>
               </div>

@@ -9,7 +9,7 @@ export default function FeaturedVideoSection() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="bg-black py-0 pb-24 md:pb-36 px-6" ref={containerRef}>
+    <section className="bg-black py-12 md:py-0 pb-24 md:pb-36 px-6" ref={containerRef}>
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

@@ -90,9 +90,18 @@ body {
 /* === MARQUEE STRIP === */
 @keyframes marquee {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  to   { transform: translateX(-33.33%); }
 }
-.marquee-inner { animation: marquee 28s linear infinite; }
+.marquee-inner { animation: marquee 60s linear infinite; }
+@media (max-width: 768px) {
+  .marquee-inner { animation-duration: 40s; }
+}
+
+/* === MASK EDGES === */
+.mask-edges {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
 
 /* === GLOW PULSE === */
 @keyframes glow-pulse {

@@ -10,7 +10,7 @@ export default function HeroSection() {
   const { tilt, handleMouseMove, handleMouseLeave } = useMouseTilt(15, 10, 0.08);
 
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden flex flex-col">
+    <section className="min-h-[100dvh] bg-black relative overflow-hidden flex flex-col">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
         <Canvas camera={{ position: [0, 0, 600], fov: 60, near: 0.1, far: 2000 }}>
@@ -19,16 +19,16 @@ export default function HeroSection() {
       </div>
 
       {/* Navbar */}
-      <nav className="px-8 py-6 relative z-20 w-full">
-        <div className="liquid-glass max-w-6xl mx-auto rounded-full px-7 py-3.5 flex items-center justify-between">
+      <nav className="px-4 md:px-8 py-6 relative z-20 w-full">
+        <div className="liquid-glass max-w-6xl mx-auto rounded-full px-4 md:px-7 py-3.5 flex items-center justify-between">
           <div className="flex items-center">
-            <span className="font-mono font-bold text-xl text-white tracking-[0.15em]">FO</span>
-            <div className="w-px h-4 bg-white/20 mx-4" />
-            <div className="flex items-center gap-3">
-              <span className="font-body text-sm text-white/40 font-medium">Figuring Out</span>
-              <div className="hidden sm:flex items-center gap-1.5 liquid-glass rounded-full px-2 py-1 border border-white/5">
+            <span className="font-mono font-bold text-lg md:text-xl text-white tracking-[0.15em]">FO</span>
+            <div className="w-px h-4 bg-white/20 mx-3 md:mx-4" />
+            <div className="flex items-center gap-2 md:gap-3">
+              <span className="font-body text-xs md:text-sm text-white/40 font-medium">Figuring Out</span>
+              <div className="hidden xs:flex items-center gap-1.5 liquid-glass rounded-full px-2 py-1 border border-white/5">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                <span className="font-mono text-[9px] text-white/60 tracking-wider">17.5M+ SUBSCRIBERS</span>
+                <span className="font-mono text-[9px] text-white/50 tracking-wider">17.5M+</span>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function HeroSection() {
             initial={{ y: 60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1, duration: 1, ease: [0.16,1,0.3,1] }}
-            className="font-display text-[clamp(64px,10vw,120px)] text-white leading-[0.88] tracking-[-0.03em]"
+            className="font-display text-[clamp(48px,12vw,120px)] text-white leading-[0.88] tracking-[-0.03em]"
           >
             Figure
             <em className="italic text-white/25 block"> Out</em>

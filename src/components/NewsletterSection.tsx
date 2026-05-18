@@ -24,14 +24,16 @@ export default function NewsletterSection() {
           500,000+ subscribers get weekly episode drops, playbooks, and insider insights straight from Raj's desk.
         </p>
 
-        <div className="liquid-glass rounded-full pl-6 pr-2 py-2 flex items-center gap-3 mt-10 max-w-md mx-auto focus-within:ring-1 focus-within:ring-white/20 transition-all">
-          <Mail className="w-5 h-5 text-white/30 shrink-0" />
-          <input 
-            type="email" 
-            placeholder="Enter your email address..." 
-            className="bg-transparent border-none outline-none flex-1 font-body text-sm text-white placeholder:text-white/30"
-          />
-          <button className="bg-white text-black rounded-full px-6 py-2.5 font-semibold text-sm hover:bg-white/90 transition-colors shrink-0 flex items-center gap-2">
+        <div className="liquid-glass rounded-3xl md:rounded-full pl-4 md:pl-6 pr-2 py-2 flex flex-col md:flex-row items-stretch md:items-center gap-3 mt-10 max-w-md mx-auto focus-within:ring-1 focus-within:ring-white/20 transition-all">
+          <div className="flex items-center gap-3 py-2 md:py-0">
+            <Mail className="w-5 h-5 text-white/30 shrink-0" />
+            <input 
+              type="email" 
+              placeholder="Email address..." 
+              className="bg-transparent border-none outline-none flex-1 font-body text-sm text-white placeholder:text-white/30"
+            />
+          </div>
+          <button className="bg-white text-black rounded-2xl md:rounded-full px-6 py-3 md:py-2.5 font-semibold text-sm hover:bg-white/90 transition-colors shrink-0 flex items-center justify-center gap-2">
             Subscribe <ArrowRight className="w-4 h-4" />
           </button>
         </div>

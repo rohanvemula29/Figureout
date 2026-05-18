@@ -43,7 +43,7 @@ export default function StatsSection() {
               transition: { staggerChildren: 0.12 }
             }
           }}
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-16"
+          className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-4 mt-16"
         >
           {stats.map((stat, i) => (
             <StatCard key={i} stat={stat} startAnimation={isInView} />

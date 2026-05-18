@@ -75,10 +75,14 @@ export default function BioSection() {
           {/* Left Column Sidebar */}
           <div className="lg:pr-12">
             <div className="liquid-glass rounded-3xl p-6 md:p-8 h-fit lg:sticky lg:top-24">
+              <div className="mb-6 hidden lg:block">
+                <p className="font-mono text-[10px] text-white/10 uppercase tracking-widest">Dossier</p>
+                <div className="w-12 h-px bg-white/10 mt-2" />
+              </div>
               {sidebarData.map((item, i) => (
-                <div key={i} className="border-b border-white/5 py-3 last:border-0 hover:bg-white/5 transition-colors -mx-6 px-6 md:-mx-8 md:px-8">
-                  <p className="font-mono text-[10px] text-white/25 tracking-[0.25em] uppercase">{item.label}</p>
-                  <p className="font-body text-sm text-white/70 mt-0.5">{item.value}</p>
+                <div key={i} className="border-b border-white/5 py-3 md:py-4 last:border-0 hover:bg-white/5 transition-colors -mx-6 px-6 md:-mx-8 md:px-8">
+                  <p className="font-mono text-[9px] md:text-[10px] text-white/20 tracking-[0.25em] uppercase">{item.label}</p>
+                  <p className="font-body text-sm text-white/70 mt-1 leading-relaxed">{item.value}</p>
                 </div>
               ))}
             </div>
