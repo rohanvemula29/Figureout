@@ -24,7 +24,13 @@ export default function HeroSection() {
           <div className="flex items-center">
             <span className="font-mono font-bold text-xl text-white tracking-[0.15em]">FO</span>
             <div className="w-px h-4 bg-white/20 mx-4" />
-            <span className="font-body text-sm text-white/40 font-medium">Figuring Out</span>
+            <div className="flex items-center gap-3">
+              <span className="font-body text-sm text-white/40 font-medium">Figuring Out</span>
+              <div className="hidden sm:flex items-center gap-1.5 liquid-glass rounded-full px-2 py-1 border border-white/5">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                <span className="font-mono text-[9px] text-white/60 tracking-wider">17.5M+ SUBSCRIBERS</span>
+              </div>
+            </div>
           </div>
 
           <div className="hidden md:flex items-center gap-8">

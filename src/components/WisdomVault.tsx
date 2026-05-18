@@ -7,7 +7,7 @@ const lessons = [
     episode: "FO 335",
     lesson: "Success is a lousy teacher. It seduces smart people into thinking they can't lose.",
     context: "On long-term innovation and the danger of complacency in business.",
-    thumbnail: "https://i.ytimg.com/vi/ZsPygh37hpw/maxresdefault.jpg" // Placeholder
+    thumbnail: "https://i.ytimg.com/vi/xAt1xcC6qfM/maxresdefault.jpg"
   },
   {
     guest: "Ashneer Grover",
@@ -28,7 +28,7 @@ const lessons = [
     episode: "FO 5",
     lesson: "Risk is not about being blind. It's about calculated exposure.",
     context: "On building Zerodha and the philosophy of wealth creation.",
-    thumbnail: "https://i.ytimg.com/vi/90lLQVZe2Nc/maxresdefault.jpg"
+    thumbnail: "https://i.ytimg.com/vi/cpg78ouK54I/maxresdefault.jpg"
   }
 ];
 

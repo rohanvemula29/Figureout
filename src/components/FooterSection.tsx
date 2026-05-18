@@ -26,7 +26,7 @@ export default function FooterSection() {
               <a href="https://www.linkedin.com/in/rajshamani/" target="_blank" rel="noopener noreferrer" className="liquid-glass rounded-full p-2.5 text-white/40 hover:text-white transition-colors">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="https://open.spotify.com/show/0O1BEE3hHksV17EunV0m9b" target="_blank" rel="noopener noreferrer" className="liquid-glass rounded-full p-2.5 text-white/40 hover:text-white transition-colors">
+              <a href="https://open.spotify.com/show/736rhmW7vilNgkFFo8aDz4" target="_blank" rel="noopener noreferrer" className="liquid-glass rounded-full p-2.5 text-white/40 hover:text-white transition-colors">
                 <Music className="w-4 h-4" />
               </a>
             </div>
@@ -54,9 +54,9 @@ export default function FooterSection() {
           <div className="flex flex-col gap-4">
             <p className="font-mono text-[10px] text-white/40 tracking-widest uppercase mb-2">Listen On</p>
             <a href="https://www.youtube.com/@rajshamani" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">YouTube</a>
-            <a href="https://open.spotify.com/show/0O1BEE3hHksV17EunV0m9b" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Spotify</a>
-            <a href="https://podcasts.apple.com/in/podcast/figuring-out-with-raj-shamani/id1507401340" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Apple Podcasts</a>
-            <a href="https://music.amazon.in/podcasts/4cbfe4aa-c92c-4731-ac07-ba7e8e503b41/figuring-out-with-raj-shamani" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Amazon Music</a>
+            <a href="https://open.spotify.com/show/736rhmW7vilNgkFFo8aDz4" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Spotify</a>
+            <a href="https://podcasts.apple.com/podcast/id1502476579" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Apple Podcasts</a>
+            <a href="https://www.audible.in/podcast/Figuring-Out-with-Raj-Shamani/B08JJNXJ3J" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Amazon Music</a>
           </div>
         </div>
 

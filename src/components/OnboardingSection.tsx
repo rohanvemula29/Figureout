@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Play, X } from 'lucide-react';
 import { VideoThumbnail } from './VideoThumbnail';
 
 const onboardingEpisodes = [
@@ -17,10 +17,10 @@ const onboardingEpisodes = [
     id: "FO335",
     num: "335",
     guest: "Bill Gates",
-    vid: "ZsPygh37hpw", // Placeholder if specific ID unknown, using Mallya as placeholder for now since I don't have Bill Gates ID handy
+    vid: "xAt1xcC6qfM",
     quote: "He changed how I think about business.",
     reason: "Global innovation meets Indian ground reality.",
-    thumbnail: "https://i.ytimg.com/vi/ZsPygh37hpw/maxresdefault.jpg"
+    thumbnail: "https://i.ytimg.com/vi/xAt1xcC6qfM/maxresdefault.jpg"
   },
   {
     id: "FO23",
@@ -34,6 +34,8 @@ const onboardingEpisodes = [
 ];
 
 export default function OnboardingSection() {
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
   return (
     <section className="bg-black py-24 px-6 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
@@ -60,7 +62,7 @@ export default function OnboardingSection() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className="liquid-glass rounded-3xl p-6 group cursor-pointer"
-              onClick={() => window.open(`https://www.youtube.com/watch?v=${ep.vid}`, '_blank')}
+              onClick={() => setActiveVideo(ep.vid)}
             >
               <div className="aspect-video rounded-2xl overflow-hidden mb-6 relative">
                 <VideoThumbnail src={ep.thumbnail} alt={ep.guest} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -81,6 +83,41 @@ export default function OnboardingSection() {
           ))}
         </div>
       </div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {activeVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 bg-black/95 backdrop-blur-xl"
+            onClick={() => setActiveVideo(null)}
+          >
+            <motion.div 
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-5xl aspect-video liquid-glass rounded-3xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${activeVideo}?autoplay=1`}
+                title="Podcast Player"
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+              <button 
+                onClick={() => setActiveVideo(null)}
+                className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center text-white backdrop-blur-md"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

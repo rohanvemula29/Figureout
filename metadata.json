@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Figuring Out with Raj Shamani",
+  "description": "Official website for the Figuring Out podcast. Watch episodes, listen on platforms, and explore the wisdom vault.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

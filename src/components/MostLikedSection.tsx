@@ -1,11 +1,22 @@
-import React from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Heart } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { Heart, X } from 'lucide-react';
 import { VideoThumbnail } from './VideoThumbnail';
 
 export default function MostLikedSection() {
   const containerRef = React.useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-80px" });
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
+  const mostLikedVideo = {
+    ytId: "NuBo8fvnYw0",
+    title: "Ashneer Grover Shares EASY Hacks To Make A Profitable Business",
+    guest: "Ashneer Grover · Season 2",
+    views: "5.9M+",
+    likes: "152.8K",
+    rank: "#02",
+    quote: "After Shark Tank India made Ashneer Grover a household name, this episode became the definitive deep-dive into his entrepreneurial playbook."
+  };
 
   return (
     <section className="bg-black py-24 px-6 relative" ref={containerRef}>
@@ -52,25 +63,65 @@ export default function MostLikedSection() {
 
           {/* Right Video Mock */}
           <motion.div 
+            onClick={() => setActiveVideo(mostLikedVideo.ytId)}
             whileHover={{ scale: 1.02 }}
-            className="liquid-glass rounded-2xl overflow-hidden aspect-video relative group cursor-pointer"
+            className="liquid-glass rounded-2xl overflow-hidden aspect-video relative group cursor-pointer block"
           >
             <VideoThumbnail 
-              src="https://i.ytimg.com/vi/NuBo8fvnYw0/maxresdefault.jpg" 
+              src={`https://i.ytimg.com/vi/${mostLikedVideo.ytId}/maxresdefault.jpg`} 
               alt="Most Liked Episode"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+              <div className="liquid-glass rounded-full w-14 h-14 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all transform scale-90 group-hover:scale-100">
+                <Heart className="w-6 h-6 text-white fill-white" />
+              </div>
+            </div>
             
             {/* Heart Badge */}
             <div className="absolute top-4 right-4 liquid-glass bg-black/40 backdrop-blur-md rounded-full px-3 py-1.5 flex items-center gap-2">
               <Heart className="w-3 h-3 text-white fill-white" />
-              <span className="font-mono text-xs text-white tracking-wide">152.8K</span>
+              <span className="font-mono text-xs text-white tracking-wide">{mostLikedVideo.likes}</span>
             </div>
           </motion.div>
 
         </div>
       </motion.div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {activeVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 bg-black/95 backdrop-blur-xl"
+            onClick={() => setActiveVideo(null)}
+          >
+            <motion.div 
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-5xl aspect-video liquid-glass rounded-3xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${activeVideo}?autoplay=1`}
+                title="Podcast Player"
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+              <button 
+                onClick={() => setActiveVideo(null)}
+                className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center text-white backdrop-blur-md"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

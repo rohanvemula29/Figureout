@@ -1,12 +1,13 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Clock, Calendar, ArrowRight, Play } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { Clock, Calendar, ArrowRight, Play, X } from 'lucide-react';
 import { VideoThumbnail } from './VideoThumbnail';
 
 export default function RecentSection() {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const scrollRef = useRef(null);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   const episodes = [
     {
@@ -17,7 +18,8 @@ export default function RecentSection() {
       date: "1 day ago",
       views: "1.1M",
       duration: "1h 10m",
-      img: "https://i.ytimg.com/vi/placeholder-510/maxresdefault.jpg"
+      img: "https://i.ytimg.com/vi/XCjBc4WBHYc/maxresdefault.jpg",
+      ytId: "XCjBc4WBHYc"
     },
     {
       id: "509",
@@ -27,7 +29,8 @@ export default function RecentSection() {
       date: "3 days ago",
       views: "866K",
       duration: "1h 12m",
-      img: "https://i.ytimg.com/vi/-vS6pEvWEAQ/maxresdefault.jpg"
+      img: "https://i.ytimg.com/vi/-vS6pEvWEAQ/maxresdefault.jpg",
+      ytId: "-vS6pEvWEAQ"
     },
     {
       id: "508",
@@ -37,7 +40,8 @@ export default function RecentSection() {
       date: "5 days ago",
       views: "469K",
       duration: "1h 5m",
-      img: "https://i.ytimg.com/vi/placeholder-508/maxresdefault.jpg"
+      img: "https://i.ytimg.com/vi/EF-tWak4mLg/maxresdefault.jpg",
+      ytId: "EF-tWak4mLg"
     },
     {
       id: "507",
@@ -47,7 +51,8 @@ export default function RecentSection() {
       date: "8 days ago",
       views: "1.8M",
       duration: "1h 20m",
-      img: "https://i.ytimg.com/vi/placeholder-507/maxresdefault.jpg"
+      img: "https://i.ytimg.com/vi/uG_9-c6mC8o/maxresdefault.jpg",
+      ytId: "uG_9-c6mC8o"
     },
     {
       id: "506",
@@ -57,7 +62,8 @@ export default function RecentSection() {
       date: "8 days ago",
       views: "386K",
       duration: "2h 05m",
-      img: "https://i.ytimg.com/vi/placeholder-506/maxresdefault.jpg"
+      img: "https://i.ytimg.com/vi/placeholder-506/maxresdefault.jpg",
+      ytId: "EF-tWak4mLg"
     },
     {
       id: "505",
@@ -67,7 +73,8 @@ export default function RecentSection() {
       date: "Oct 2024",
       views: "256K",
       duration: "1h 15m",
-      img: "https://i.ytimg.com/vi/placeholder-505/maxresdefault.jpg"
+      img: "https://i.ytimg.com/vi/ZsPygh37hpw/maxresdefault.jpg",
+      ytId: "ZsPygh37hpw"
     },
     {
       id: "504",
@@ -77,7 +84,8 @@ export default function RecentSection() {
       date: "Oct 2024",
       views: "183K",
       duration: "1h 0m",
-      img: "https://i.ytimg.com/vi/placeholder-504/maxresdefault.jpg"
+      img: "https://i.ytimg.com/vi/LB6s2EOGClw/maxresdefault.jpg",
+      ytId: "LB6s2EOGClw"
     },
     {
       id: "503",
@@ -87,7 +95,8 @@ export default function RecentSection() {
       date: "Sep 2024",
       views: "712K",
       duration: "1h 25m",
-      img: "https://i.ytimg.com/vi/placeholder-503/maxresdefault.jpg"
+      img: "https://i.ytimg.com/vi/ig1VtIEFkcI/maxresdefault.jpg",
+      ytId: "ig1VtIEFkcI"
     },
     {
       id: "500",
@@ -97,7 +106,8 @@ export default function RecentSection() {
       date: "Sep 2024",
       views: "4.1M",
       duration: "1h 45m",
-      img: "https://i.ytimg.com/vi/placeholder-500/maxresdefault.jpg"
+      img: "https://i.ytimg.com/vi/w9TAdQxshhg/maxresdefault.jpg",
+      ytId: "w9TAdQxshhg"
     }
   ];
 
@@ -129,11 +139,22 @@ export default function RecentSection() {
           {episodes.map((ep, i) => (
             <motion.div 
               key={ep.id}
-              whileHover={{ y: -5 }}
-              className="liquid-glass rounded-3xl overflow-hidden flex-shrink-0 w-72 md:w-[340px] select-none"
+              whileHover={{ y: -8, scale: 1.02 }}
+              onClick={() => setActiveVideo(ep.ytId)}
+              className="liquid-glass rounded-3xl overflow-hidden flex-shrink-0 w-72 md:w-[400px] select-none cursor-pointer group"
             >
-              <div className="aspect-video w-full relative">
-                <VideoThumbnail src={ep.img} alt={ep.title} className="w-full h-full object-cover" draggable={false} />
+              <div className="aspect-video w-full relative overflow-hidden">
+                <VideoThumbnail 
+                  src={ep.img} 
+                  alt={ep.title} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                  draggable={false} 
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 transform scale-90 group-hover:scale-100 transition-transform">
+                    <Play className="w-6 h-6 text-white fill-white" />
+                  </div>
+                </div>
               </div>
               <div className="p-6">
                 <p className="font-mono text-[10px] text-white/60 tracking-widest uppercase mb-3">
@@ -159,6 +180,41 @@ export default function RecentSection() {
           ))}
         </motion.div>
       </motion.div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {activeVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 bg-black/95 backdrop-blur-xl"
+            onClick={() => setActiveVideo(null)}
+          >
+            <motion.div 
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-5xl aspect-video liquid-glass rounded-3xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${activeVideo}?autoplay=1`}
+                title="Podcast Player"
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+              <button 
+                onClick={() => setActiveVideo(null)}
+                className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center text-white backdrop-blur-md"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

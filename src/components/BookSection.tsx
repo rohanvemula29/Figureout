@@ -33,9 +33,14 @@ export default function BookSection() {
             Raj Shamani's debut book distills the mindset of India's most successful entrepreneurs into a no-nonsense guide for anyone who wants to stop planning and start building. A bestseller that became a movement.
           </p>
           
-          <button className="bg-black text-white rounded-full px-8 py-4 font-semibold text-sm mt-10 inline-flex items-center gap-2 hover:bg-black/80 transition-colors">
+          <a 
+            href="https://www.amazon.in/s?k=Build+Don%27t+Talk+Raj+Shamani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black text-white rounded-full px-8 py-4 font-semibold text-sm mt-10 inline-flex items-center gap-2 hover:bg-black/80 transition-colors"
+          >
             Get your copy <ExternalLink className="w-4 h-4 text-white/70" />
-          </button>
+          </a>
         </div>
 
         {/* Right: Book Mockup */}

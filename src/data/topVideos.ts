@@ -37,41 +37,40 @@ export const topVideos: TopVideo[] = [
   {
     id: "2",
     rank: "02",
-    guest: "Vijay Mallya · Businessman",
-    episode: "FO 364 · June 2025",
-    title: "Vijay Mallya Podcast: Rise & Downfall Of Kingfisher Airlines, Loans & RCB",
+    guest: "Bill Gates · Co-founder Microsoft",
+    episode: "FO 335 · March 2025",
+    title: "Bill Gates On AI, Future Of India, Climate Change & Philanthropy",
     views: "30M",
     likes: "250K+",
-    youtubeId: "ZsPygh37hpw",
-    note: "His first interview in 9 years. Addressed the loan default allegations, Kingfisher’s collapse, and his love for RCB. Clocked 30M views on YouTube alone.",
-    thumbnail: "https://i.ytimg.com/vi/ZsPygh37hpw/maxresdefault.jpg",
+    youtubeId: "xAt1xcC6qfM",
+    note: "Bill Gates discusses the future of technology and India's role in the global economy.",
+    thumbnail: "https://i.ytimg.com/vi/xAt1xcC6qfM/maxresdefault.jpg",
     topics: [
-      "Kingfisher Airlines collapse",
-      "Loan default allegations",
-      "Love for RCB",
-      "Conditions for India return",
-      "First interview in 9 years"
+      "AI & Technology",
+      "Climate Change",
+      "India's Future",
+      "Philanthropy"
     ],
-    quote: "It was always my intention to settle. Never did I say I didn't want to pay."
+    quote: "The next 10 years will be the most innovative in human history."
   },
   {
     id: "3",
     rank: "03",
-    guest: "Lucky Bisht · Former RAW Agent",
-    episode: "FO 198 · 2024",
-    title: "Indian Spy: Dark Reality China, Weapons, Commando Training & Jail – Lucky Bisht",
+    guest: "Nikhil Kamath · Co-founder Zerodha",
+    episode: "FO 5 · 2022",
+    title: "Nikhil Kamath On Wealth, Stock Market, Zerodha & Hard Truths",
     views: "27M",
     likes: "320K+",
-    youtubeId: "LB6s2EOGClw",
-    note: "A former RAW agent’s account of espionage, jail, and China’s secret operations. One of the most gripping episodes of the channel.",
-    thumbnail: "https://i.ytimg.com/vi/LB6s2EOGClw/maxresdefault.jpg",
+    youtubeId: "cpg78ouK54I",
+    note: "A masterclass in wealth creation and the reality of the Indian stock market.",
+    thumbnail: "https://i.ytimg.com/vi/cpg78ouK54I/maxresdefault.jpg",
     topics: [
-      "RAW operations",
-      "Chinese border intrusions",
-      "Commando training",
-      "Prison stories"
+      "Wealth creation",
+      "Zerodha story",
+      "Stock market",
+      "Hard truths about success"
     ],
-    quote: "A true soldier never dies for his country, he makes the enemy die for theirs."
+    quote: "Being rich is not about how much you make, it's about how much you keep."
   },
   {
     id: "4",
@@ -96,21 +95,20 @@ export const topVideos: TopVideo[] = [
   {
     id: "5",
     rank: "05",
-    guest: "Col. Shivender Kanwar · Indian Army (PARA SF)",
-    episode: "FO 239 · 2024",
-    title: "PARA SFs, Indian Army, Weapons & Dangerous Missions ft. Col. Shivender Kanwar",
+    guest: "Vishwa Mohan · EdTech Expert",
+    episode: "FO 508 · 2025",
+    title: "The IIT Race, Coaching Mafia & Reality of EdTech",
     views: "13M",
     likes: "210K+",
     youtubeId: "EF-tWak4mLg",
-    note: "A deep dive into special forces operations, border tensions, and the mindset of India’s toughest soldiers.",
+    note: "A hard-hitting look at the education system and the pressure on Indian students.",
     thumbnail: "https://i.ytimg.com/vi/EF-tWak4mLg/maxresdefault.jpg",
     topics: [
-      "PARA SF operations",
-      "Indian Army selection",
-      "Weapons and technology",
-      "Dangerous missions",
-      "Special forces mindset"
+      "IIT pressure",
+      "Coaching mafia",
+      "EdTech sector",
+      "Career advice"
     ],
-    quote: "When you wear the uniform, there is no fear. Only duty."
+    quote: "True education is not about competitive exams, it's about finding what you're good at."
   }
 ];
