@@ -67,7 +67,7 @@ export default function FooterSection() {
               © 2026 Figuring Out Media · 17.5M subscribers · 2.4k videos. All rights reserved.
             </p>
             <p className="font-mono text-[10px] text-white/20 uppercase tracking-widest">
-              Built by <span className="text-white/50">ROHAN VEMULA</span> · <a href="mailto:rohanvemula7@gmail.com" className="hover:text-white/60 transition-colors">rohanvemula7@gmail.com</a>
+              Built by <span className="text-white/80 font-medium">ROHAN VEMULA</span> · <a href="mailto:rohanvemula7@gmail.com" className="text-white/40 hover:text-white transition-colors underline decoration-white/10 underline-offset-4">rohanvemula7@gmail.com</a>
             </p>
           </div>
           <p className="font-mono text-[10px] text-white/15 uppercase tracking-wide">
