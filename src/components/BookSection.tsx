@@ -56,6 +56,7 @@ export default function BookSection() {
             src="https://covers.openlibrary.org/b/isbn/9780143459682-L.jpg" 
             alt="Build, Don't Talk Book Cover"
             className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
           />
         </motion.div>
       </motion.div>

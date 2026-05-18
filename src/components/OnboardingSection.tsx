@@ -5,13 +5,13 @@ import { VideoThumbnail } from './VideoThumbnail';
 
 const onboardingEpisodes = [
   {
-    id: "FO343",
-    num: "343",
-    guest: "Khan Sir",
-    vid: "aA5tLih8oDk",
-    quote: "India's teacher, uncensored.",
-    reason: "The most-watched episode for a reason. Real, raw, and ground-level.",
-    thumbnail: "https://i.ytimg.com/vi/aA5tLih8oDk/maxresdefault.jpg"
+    id: "FO476",
+    num: "476",
+    guest: "Simon Sinek",
+    vid: "E3oG313_kps",
+    quote: "Working hard for something we love is passion.",
+    reason: "A global legend discusses loneliness, leadership, and friendships.",
+    thumbnail: "https://i.ytimg.com/vi/E3oG313_kps/maxresdefault.jpg"
   },
   {
     id: "FO335",

@@ -52,7 +52,12 @@ export default function WisdomVault() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-                   <img src={item.thumbnail} alt={item.guest} className="w-full h-full object-cover" />
+                   <img 
+                   src={item.thumbnail} 
+                   alt={item.guest} 
+                   className="w-full h-full object-cover" 
+                   referrerPolicy="no-referrer"
+                 />
                 </div>
                 <div>
                   <p className="font-mono text-[9px] text-white/40 tracking-widest uppercase">{item.guest}</p>

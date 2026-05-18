@@ -143,6 +143,7 @@ export default function HeroSection() {
               alt="Raj Shamani"
               className="w-full h-full object-cover object-center"
               style={{ transform: 'translateZ(0px)' }}
+              referrerPolicy="no-referrer"
             />
             
             <div 
