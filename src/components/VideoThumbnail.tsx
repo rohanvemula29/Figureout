@@ -46,6 +46,7 @@ export function VideoThumbnail({ src, alt, className, draggable }: VideoThumbnai
       className={className} 
       draggable={draggable}
       onError={handleError}
+      referrerPolicy="no-referrer"
     />
   );
 }
