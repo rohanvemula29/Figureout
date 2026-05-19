@@ -1,5 +1,6 @@
 import React from 'react';
-import { Youtube, Instagram, Twitter, Linkedin, Music, Headphones } from 'lucide-react';
+import { Youtube, Instagram, Twitter, Linkedin, Music } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function FooterSection() {
   return (
@@ -34,11 +35,10 @@ export default function FooterSection() {
 
           {/* Col 2 */}
           <div className="flex flex-col gap-4">
-            <p className="font-mono text-[10px] text-white/40 tracking-widest uppercase mb-2">Episodes</p>
-            <a href="#top-videos" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Top Videos</a>
-            <a href="#recent" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Recent Episodes</a>
-            <a href="#guests" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Guest Archive</a>
-            <a href="https://www.youtube.com/@rajshamani/shorts" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Shorts & Clips</a>
+            <p className="font-mono text-[10px] text-white/40 tracking-widest uppercase mb-2">Legal</p>
+            <Link to="/privacy" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Privacy Policy</Link>
+            <Link to="/terms" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Terms of Service</Link>
+            <a href="mailto:rohanvemula7@gmail.com" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Contact Us</a>
           </div>
 
           {/* Col 3 */}
@@ -47,16 +47,14 @@ export default function FooterSection() {
             <a href="#about" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">About Raj</a>
             <a href="#book" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Build Don't Talk</a>
             <a href="https://houseofx.in/" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">House of X</a>
-            <a href="https://shamaniindustries.com/" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Shamani Industries</a>
           </div>
 
           {/* Col 4 */}
           <div className="flex flex-col gap-4">
             <p className="font-mono text-[10px] text-white/40 tracking-widest uppercase mb-2">Listen On</p>
-            <a href="https://www.youtube.com/@rajshamani" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">YouTube</a>
             <a href="https://open.spotify.com/show/736rhmW7vilNgkFFo8aDz4" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Spotify</a>
             <a href="https://podcasts.apple.com/podcast/id1502476579" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Apple Podcasts</a>
-            <a href="https://www.audible.in/podcast/Figuring-Out-with-Raj-Shamani/B08JJNXJ3J" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Amazon Music</a>
+            <a href="https://www.audible.in/podcast/Figuring-Out-with-Raj-Shamani/B08JJNXJ3J" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Audible</a>
           </div>
         </div>
 

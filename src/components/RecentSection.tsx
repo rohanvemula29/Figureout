@@ -62,8 +62,8 @@ export default function RecentSection() {
       date: "8 days ago",
       views: "386K",
       duration: "2h 05m",
-      img: "https://i.ytimg.com/vi/placeholder-506/maxresdefault.jpg",
-      ytId: "EF-tWak4mLg"
+      img: "https://i.ytimg.com/vi/pS0O4P8y4M8/maxresdefault.jpg",
+      ytId: "pS0O4P8y4M8"
     },
     {
       id: "505",
