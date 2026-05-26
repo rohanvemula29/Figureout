@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 import HomePage from './pages/HomePage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/terms" element={<TermsPage />} />
         </Routes>
       </AnimatePresence>
+      <Analytics />
     </Router>
   );
 }
