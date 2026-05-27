@@ -44,7 +44,7 @@ export default function FooterSection() {
           {/* Col 3 */}
           <div className="flex flex-col gap-4">
             <p className="font-mono text-[10px] text-white/40 tracking-widest uppercase mb-2">Raj Shamani</p>
-            <a href="#about" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">About Raj</a>
+            <a href="#bio" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">About Raj</a>
             <a href="#book" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">Build Don't Talk</a>
             <a href="https://houseofx.in/" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-white/30 hover:text-white transition-colors w-fit">House of X</a>
           </div>

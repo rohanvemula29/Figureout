@@ -34,7 +34,7 @@ const lessons = [
 
 export default function WisdomVault() {
   return (
-    <section className="bg-black py-24 px-6">
+    <section id="wisdom-vault" className="bg-black py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <p className="font-mono text-[10px] text-white/20 tracking-[0.4em] uppercase mb-12">
           WISDOM VAULT

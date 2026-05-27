@@ -2,6 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // Prevent "Cannot set property fetch of #<Window> which has only a getter" error
+      // This is a robust mitigation for environments or third-party scripts (like AdSense / sandboxes)
+      // that attempt to override window.fetch under restrictive security policies.
+      (function() {
+        try {
+          var target = window;
+          var prop = 'fetch';
+          var desc = Object.getOwnPropertyDescriptor(target, prop);
+          
+          if (!desc && typeof Window !== 'undefined' && Window.prototype) {
+            target = Window.prototype;
+            desc = Object.getOwnPropertyDescriptor(target, prop);
+          }
+          
+          var originalFetch = window.fetch;
+          if (!originalFetch && target !== window) {
+            originalFetch = target[prop];
+          }
+          
+          if (originalFetch) {
+            var currentFetch = originalFetch;
+            var newDescriptor = {
+              configurable: true,
+              enumerable: true,
+              get: function() {
+                return currentFetch;
+              },
+              set: function(val) {
+                currentFetch = val;
+              }
+            };
+
+            try {
+              Object.defineProperty(window, prop, newDescriptor);
+            } catch (e1) {
+              if (typeof Window !== 'undefined' && Window.prototype) {
+                try {
+                  Object.defineProperty(Window.prototype, prop, newDescriptor);
+                } catch (e2) {
+                  // silent fallback
+                }
+              }
+            }
+          }
+        } catch (globalErr) {
+          // silent fallback
+        }
+      })();
+    </script>
     <meta name="google-adsense-account" content="ca-pub-6542378313114628">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542378313114628"
      crossorigin="anonymous"></script>

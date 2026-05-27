@@ -18,39 +18,8 @@ export default function HeroSection() {
         </Canvas>
       </div>
 
-      {/* Navbar */}
-      <nav className="px-4 md:px-8 py-6 relative z-20 w-full">
-        <div className="liquid-glass max-w-6xl mx-auto rounded-full px-4 md:px-7 py-3.5 flex items-center justify-between">
-          <div className="flex items-center">
-            <span className="font-mono font-bold text-lg md:text-xl text-white tracking-[0.15em]">FO</span>
-            <div className="w-px h-4 bg-white/20 mx-3 md:mx-4" />
-            <div className="flex items-center gap-2 md:gap-3">
-              <span className="font-body text-xs md:text-sm text-white/40 font-medium">Figuring Out</span>
-              <div className="hidden xs:flex items-center gap-1.5 liquid-glass rounded-full px-2 py-1 border border-white/5">
-                <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                <span className="font-mono text-[9px] text-white/50 tracking-wider">17.5M+</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden md:flex items-center gap-8">
-            {['Home', 'Episodes', 'Bio', 'Stats', 'Comments'].map(link => (
-              <a key={link} href={`#${link.toLowerCase()}`} className="font-body text-sm text-white/50 hover:text-white transition-colors tracking-wide">
-                {link}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-4">
-            <a href="#book" className="hidden md:block liquid-glass rounded-full px-5 py-2 text-white text-xs font-mono">
-              Build, Don't Talk ↗
-            </a>
-            <a href="https://www.youtube.com/@rajshamani?sub_confirmation=1" target="_blank" rel="noopener noreferrer" className="bg-white text-black rounded-full px-5 py-2 text-xs font-semibold font-body hover:bg-white/90 transition flex items-center justify-center">
-              Subscribe
-            </a>
-          </div>
-        </div>
-      </nav>
+      {/* Sticky Header spacer */}
+      <div className="h-[80px] md:h-[90px] w-full shrink-0" />
 
       {/* Main Hero Content */}
       <div className="flex-1 max-w-6xl mx-auto w-full px-6 flex flex-col md:flex-row items-center justify-center gap-12 relative z-10 py-12">
