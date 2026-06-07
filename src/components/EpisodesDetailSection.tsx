@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { topVideos } from '../data/topVideos';
 
 export default function EpisodesDetailSection() {
@@ -69,6 +70,19 @@ export default function EpisodesDetailSection() {
                           <blockquote className="font-display italic text-lg text-white/60 leading-relaxed border-l-2 border-white/10 pl-4">
                             "{video.quote}"
                           </blockquote>
+                        </div>
+
+                        {/* Col 4 - Dynamic Editorial Study Link */}
+                        <div className="md:col-span-3 flex flex-wrap items-center justify-between border-t border-white/5 pt-6 mt-2 gap-4">
+                          <p className="text-white/40 text-[10px] font-mono tracking-widest">
+                            ORIGINAL COMPREHENSIVE CASE STUDY GUIDE READY
+                          </p>
+                          <Link
+                            to={`/guide/${video.id === "1" ? "simon-sinek" : video.id === "2" ? "bill-gates" : video.id === "3" ? "nikhil-kamath" : video.id === "4" ? "dr-cuterus" : "vishwa-mohan"}`}
+                            className="inline-flex items-center gap-1.5 bg-red-500/10 hover:bg-neutral-100 text-red-500 hover:text-black text-xs px-5 py-2.5 rounded-full font-mono transition-all duration-300 uppercase tracking-widest border border-red-500/20"
+                          >
+                            Read Full Editorial Study Guide ↗
+                          </Link>
                         </div>
                       </div>
                     </motion.div>

@@ -39,14 +39,16 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-white text-xl font-medium mb-4">Cookies & Advertising</h2>
-            <p>Our website uses Google AdSense to display advertisements. Google uses cookies to serve ads based on a user's prior visits to your website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our sites and/or other sites on the Internet.</p>
+            <h2 className="text-white text-xl font-medium mb-4">Cookies &amp; Advertising</h2>
+            <p>Our website uses Google AdSense to serve and display advertisements to visitors. Our advertising partners (specifically Google) use tracking cookies, web beacons, and IP addresses to serve personalized or non-personalized advertisements based on your visits to our site and other pages on the internet.</p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
-              <li>Third party vendors, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites.</li>
-              <li>Google's use of advertising cookies enables it and its partners to serve ads to your users based on their visit to your sites and/or other sites on the Internet.</li>
-              <li>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" className="text-white underline">Ads Settings</a>.</li>
+              <li>Third-party vendors, including Google, use cookies to serve ads based on prior visits to our website or other websites on the internet.</li>
+              <li>Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visits to our site and/or other sites across the internet.</li>
+              <li>We do not pass any personally identifiable information (PII) to Google, and we respect user privacy choices.</li>
+              <li>You may opt out of personalized advertising at any time by visiting Google's <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-white underline">Ads Settings page</a>.</li>
+              <li>If you have not opted out of third-party ad serving, cookies of other third-party vendors or ad networks may also be used to serve ads.</li>
             </ul>
-            <p className="mt-4">You can learn more about how Google uses data when you use our partners' sites or apps by visiting <a href="https://www.google.com/policies/privacy/partners/" className="text-white underline">Google's Privacy & Terms site</a>.</p>
+            <p className="mt-4">To learn more about how Google collects and processes tracking data when you explore our platform, you should review: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-red-500 underline font-medium hover:text-red-400">How Google uses data when you use our partners' sites or apps</a>.</p>
           </section>
 
           <section>

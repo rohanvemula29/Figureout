@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Play, ExternalLink, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { VideoThumbnail } from './VideoThumbnail';
 
 export default function FeaturedVideoSection() {
@@ -84,13 +85,21 @@ export default function FeaturedVideoSection() {
             ))}
           </div>
 
-          <button 
-            onClick={() => window.open('https://www.youtube.com/watch?v=E3oG313_kps', '_blank')}
-            className="mt-10 bg-white text-black rounded-full px-7 py-3 font-semibold text-sm flex items-center gap-2 w-fit hover:bg-white/90 transition"
-          >
-            Watch on YouTube
-            <ExternalLink className="w-4 h-4" />
-          </button>
+          <div className="flex flex-wrap gap-4 mt-10">
+            <button 
+              onClick={() => window.open('https://www.youtube.com/watch?v=E3oG313_kps', '_blank')}
+              className="bg-white text-black rounded-full px-6 py-3.5 font-semibold text-sm flex items-center gap-2 hover:bg-neutral-200 transition"
+            >
+              Watch on YouTube
+              <ExternalLink className="w-4 h-4" />
+            </button>
+            <Link 
+              to="/guide/simon-sinek"
+              className="bg-red-500 hover:bg-neutral-200 hover:text-black text-white rounded-full px-6 py-3.5 font-semibold text-sm flex items-center gap-2 transition"
+            >
+              Read Editorial Case Study
+            </Link>
+          </div>
         </div>
       </motion.div>
     </section>

@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import HomePage from './pages/HomePage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsPage from './pages/TermsPage';
+import GuideDetailPage from './pages/GuideDetailPage';
 import CookieConsent from './components/CookieConsent';
 import Navbar from './components/Navbar';
 
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="/guide/:id" element={<GuideDetailPage />} />
         </Routes>
       </AnimatePresence>
     </Router>
